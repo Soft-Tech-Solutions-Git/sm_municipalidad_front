@@ -1,0 +1,27 @@
+.glide {
+  width: 100vw;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 48vh;
+  width: 100%;
+  border-radius: 25px;
+}
+button {
+  background-color: gray;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.glide__bullets button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: gray;
+}

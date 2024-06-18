@@ -20,6 +20,7 @@ export class SliderComponent implements AfterViewInit {
       // Configura las opciones de Glide aquí
       type: 'carousel',
       perView: 2,
+      startAt: 1,
       focusAt: 'center',
       autoplay: 3000,
       gap: 5,
