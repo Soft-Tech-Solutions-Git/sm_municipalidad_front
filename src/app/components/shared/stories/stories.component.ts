@@ -36,7 +36,7 @@ export class StoriesComponent implements AfterViewInit {
           perView: 5,
         },
         600: {
-          perView: 4,
+          perView: 3,
         },
         400: {
           perView: 2,
