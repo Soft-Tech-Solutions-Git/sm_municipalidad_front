@@ -2,7 +2,7 @@
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
       <li *ngFor="let image of images" class="glide__slide">
-        <img [src]="image" />
+        <img [src]="image" oncontextmenu="return false" />
       </li>
     </ul>
   </div>
