@@ -1,0 +1,39 @@
+.glide {
+  width: 100vw;
+}
+img {
+  height: 55vh;
+  width: 110vh;
+  border-radius: 25px;
+  /* border: 2px solid red; */
+}
+button {
+  background-color: gray;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+.glide__bullets button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: gray;
+}
+@media screen and (max-width: 1600px) {
+  .glide {
+    width: 100vw;
+  }
+  img {
+    height: 45vh;
+    width: 90vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  img {
+    height: 30vh;
+    width: 100%;
+  }
+}
