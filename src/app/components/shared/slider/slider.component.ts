@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as Glide from '@glidejs/glide'; //importacion normal sugerida da error por ser legacyVersion
+import { AdaptativeService } from 'src/app/services/adaptative.service';
 
 @Component({
   selector: 'app-slider',
@@ -36,5 +37,31 @@ export class SliderComponent implements AfterViewInit {
       },
     });
     this.glide.mount(); // Inicializa Glide
+  }
+
+  public posicion: string;
+
+  constructor(private AdaptativeService: AdaptativeService) {
+    this.posicion = 'center';
+  }
+
+  ngOnInit(): void {
+    if (this.AdaptativeService.sizeDisplay === 'web') {
+      // this.glide = new Glide.default('.glide', {
+      //   perView: 2,
+      //   gap: 250,
+      // });
+    }
+    if (this.AdaptativeService.sizeDisplay === 'tablet') {
+      // this.glide = new Glide.default('.glide', {
+      //   perView: 2,
+      //   gap: 200,
+      // });
+    }
+    if (this.AdaptativeService.sizeDisplay === 'phone') {
+      // this.glide = new Glide.default('.glide', {
+      //   perView: 1,
+      // });
+    }
   }
 }
