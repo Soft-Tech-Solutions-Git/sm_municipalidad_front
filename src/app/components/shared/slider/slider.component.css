@@ -1,5 +1,7 @@
-.glide {
+.glide-desktop {
   width: 100vw;
+  height: 60vh;
+  /* border: 2px solid red; */
 }
 img {
   height: 55vh;
@@ -8,23 +10,39 @@ img {
   /* border: 2px solid red; */
 }
 button {
-  background-color: gray;
-  color: #fff;
+  background-color: #fff;
+  color: #0d6dfd;
   border-radius: 50%;
   font-size: 22px;
   display: flex;
   justify-content: space-between;
   z-index: 999;
 }
+button:hover {
+  background-color: #0dcaf0;
+}
+.glide__bullets {
+  bottom: 18em;
+}
 .glide__bullets button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: gray;
+  background-color: #8e8d8d;
+}
+.glide__bullets button:hover {
+  background-color: #0d6dfd;
+}
+.glide__arrow--left {
+  left: 0px;
+}
+.glide__arrow--right {
+  right: 0px;
 }
 @media screen and (max-width: 1600px) {
   .glide {
     width: 100vw;
+    height: 100%;
   }
   img {
     height: 45vh;
@@ -32,8 +50,15 @@ button {
   }
 }
 @media screen and (max-width: 1000px) {
+  .glide {
+    width: 100vw;
+  }
+  .glide__bullets {
+    bottom: 8em;
+  }
   img {
-    height: 30vh;
+    /* border: 2px solid red; */
+    height: 70vh;
     width: 100%;
   }
 }

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import * as Glide from '@glidejs/glide'; //importacion normal sugerida da error por ser legacyVersion
+import * as Glide from '@glidejs/glide';
 import { AdaptativeService } from 'src/app/services/adaptative.service';
 
 @Component({
@@ -13,12 +13,24 @@ export class SliderComponent implements AfterViewInit {
     'assets/images/image2.svg',
     'assets/images/image3.svg',
   ];
+  mobileImages: string[] = [
+    'assets/images/mobile1.svg',
+    'assets/images/mobile2.svg',
+    'assets/images/mobile3.svg',
+  ];
 
-  public glide: any;
+  constructor(private AdaptativeService: AdaptativeService) {
+    this.isDesktopVisible = true;
+    this.isMobileVisible = true;
+  }
+  public desktopGlide: any;
+  public mobileGlide: any;
+
+  public isDesktopVisible: boolean;
+  public isMobileVisible: boolean;
 
   ngAfterViewInit(): void {
-    this.glide = new Glide.default('.glide', {
-      // Configura las opciones de Glide aquí
+    this.desktopGlide = new Glide.default('.glide-desktop', {
       type: 'carousel',
       perView: 2,
       startAt: 1,
@@ -36,32 +48,24 @@ export class SliderComponent implements AfterViewInit {
         },
       },
     });
-    this.glide.mount(); // Inicializa Glide
-  }
+    this.desktopGlide.mount();
 
-  public posicion: string;
+    this.mobileGlide = new Glide.default('.glide-mobile', {
+      type: 'carousel',
+      perView: 1,
+      startAt: 1,
+      focusAt: 'center',
+      autoplay: 3000,
+      gap: 10,
+      hoverpause: false,
+    });
+    this.mobileGlide.mount();
 
-  constructor(private AdaptativeService: AdaptativeService) {
-    this.posicion = 'center';
-  }
-
-  ngOnInit(): void {
     if (this.AdaptativeService.sizeDisplay === 'web') {
-      // this.glide = new Glide.default('.glide', {
-      //   perView: 2,
-      //   gap: 250,
-      // });
+      this.isMobileVisible = false;
     }
     if (this.AdaptativeService.sizeDisplay === 'tablet') {
-      // this.glide = new Glide.default('.glide', {
-      //   perView: 2,
-      //   gap: 200,
-      // });
-    }
-    if (this.AdaptativeService.sizeDisplay === 'phone') {
-      // this.glide = new Glide.default('.glide', {
-      //   perView: 1,
-      // });
+      this.isDesktopVisible = false;
     }
   }
 }

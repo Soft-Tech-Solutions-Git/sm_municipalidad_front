@@ -10,21 +10,21 @@ import { state } from '@angular/animations';
   providedIn: 'root',
 })
 export class AdaptativeService {
-  public sizeDisplay: string = 'phone' || 'tablet' || 'web';
+  public sizeDisplay: string = 'tablet' || 'web';
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.observeScreenSize();
   }
 
   private observeScreenSize(): void {
-    this.breakpointObserver
-      .observe(Breakpoints.Small)
-      .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          console.log('Phone');
-          this.sizeDisplay = 'phone';
-        }
-      });
+    // this.breakpointObserver
+    //   .observe(Breakpoints.Small)
+    //   .subscribe((state: BreakpointState) => {
+    //     if (state.matches) {
+    //       console.log('Phone');
+    //       this.sizeDisplay = 'phone';
+    //     }
+    //   });
 
     this.breakpointObserver
       .observe(Breakpoints.Tablet)
