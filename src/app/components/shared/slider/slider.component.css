@@ -1,12 +1,13 @@
 .glide-desktop {
+  height: 70vh;
   width: 100vw;
-  height: 60vh;
   /* border: 2px solid red; */
 }
 img {
-  height: 55vh;
-  width: 110vh;
+  height: 63vh;
+  width: 160%;
   border-radius: 25px;
+  object-fit: cover;
   /* border: 2px solid red; */
 }
 button {
@@ -22,7 +23,7 @@ button:hover {
   background-color: #0dcaf0;
 }
 .glide__bullets {
-  bottom: 18em;
+  bottom: 11em;
 }
 .glide__bullets button {
   width: 16px;
@@ -30,8 +31,8 @@ button:hover {
   border-radius: 50%;
   background-color: #8e8d8d;
 }
-.glide__bullets button:hover {
-  background-color: #0d6dfd;
+.glide__bullet--active {
+  background-color: #0d6dfd !important;
 }
 .glide__arrow--left {
   left: 0px;
@@ -40,25 +41,43 @@ button:hover {
   right: 0px;
 }
 @media screen and (max-width: 1600px) {
-  .glide {
+  .glide-desktop {
+    height: 65vh;
     width: 100vw;
-    height: 100%;
+    /* border: 2px solid red; */
   }
   img {
-    height: 45vh;
-    width: 90vh;
+    height: 58vh;
+    width: 160%;
+    /* border: 2px solid red; */
+  }
+  .glide__bullets {
+    bottom: 12em;
   }
 }
 @media screen and (max-width: 1000px) {
-  .glide {
+  .glide-mobile {
+    height: 60vh;
     width: 100vw;
   }
   .glide__bullets {
-    bottom: 8em;
+    bottom: 16em;
   }
   img {
     /* border: 2px solid red; */
-    height: 70vh;
+    height: 55vh;
     width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .glide-mobile {
+    height: 50vh;
+    /* border: 2px solid red; */
+  }
+  .glide__bullets {
+    bottom: 20em;
+  }
+  img {
+    margin-top: -35px;
   }
 }
