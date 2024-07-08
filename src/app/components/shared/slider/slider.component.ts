@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import * as Glide from '@glidejs/glide';
 import { AdaptativeService } from 'src/app/services/adaptative.service';
 
@@ -33,15 +33,15 @@ export class SliderComponent implements AfterViewInit {
     this.desktopGlide = new Glide.default('.glide-desktop', {
       type: 'carousel',
       perView: 2,
-      startAt: 1,
+      startAt: 0,
       focusAt: 'center',
       autoplay: 3000,
-      gap: 250,
+      gap: 450,
       hoverpause: false,
       breakpoints: {
         1600: {
           perView: 2,
-          gap: 200,
+          gap: 350,
         },
         1000: {
           perView: 1,
@@ -53,7 +53,7 @@ export class SliderComponent implements AfterViewInit {
     this.mobileGlide = new Glide.default('.glide-mobile', {
       type: 'carousel',
       perView: 1,
-      startAt: 1,
+      startAt: 0,
       focusAt: 'center',
       autoplay: 3000,
       gap: 10,
@@ -61,11 +61,12 @@ export class SliderComponent implements AfterViewInit {
     });
     this.mobileGlide.mount();
 
-    if (this.AdaptativeService.sizeDisplay === 'web') {
-      this.isMobileVisible = false;
-    }
-    if (this.AdaptativeService.sizeDisplay === 'tablet') {
-      this.isDesktopVisible = false;
-    }
+    setTimeout(() => {
+      if (this.AdaptativeService.sizeDisplay === 'web') {
+        this.isMobileVisible = false;
+      } else if (this.AdaptativeService.sizeDisplay === 'tablet') {
+        this.isDesktopVisible = false;
+      }
+    }, 0);
   }
 }
