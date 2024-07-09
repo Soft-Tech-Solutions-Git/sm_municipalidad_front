@@ -1,5 +1,5 @@
 .glide-desktop {
-  height: 70vh;
+  height: 55vh;
   width: 100%;
   /* border: 2px solid red; */
 }
@@ -42,7 +42,7 @@ button:hover {
 }
 @media screen and (max-width: 1600px) {
   .glide-desktop {
-    height: 60vh;
+    height: 55vh;
     width: 100%;
     /* border: 2px solid red; */
   }

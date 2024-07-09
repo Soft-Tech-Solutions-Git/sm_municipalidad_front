@@ -1,27 +1,27 @@
-.glide {
-  width: 100vw;
-  object-fit: cover;
-  align-items: center;
-  justify-content: center;
+.glide2 {
+  height: 80vh;
+  width: 100%;
+  /* border: 2px solid red; */
 }
 img {
-  height: 48vh;
+  height: 100%;
   width: 100%;
   border-radius: 25px;
-}
-button {
-  background-color: gray;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 22px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 999;
+  object-fit: cover;
 }
 
-.glide__bullets button {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: gray;
+@media screen and (max-width: 1600px) {
+  .glide2 {
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .glide2 {
+    height: 115vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .glide2 {
+    height: 75vh;
+  }
 }

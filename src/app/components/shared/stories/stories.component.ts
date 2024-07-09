@@ -24,19 +24,19 @@ export class StoriesComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.storiesGlide = new Glide.default('.glide2', {
-      // Configura las opciones de Glide aquí
       type: 'carousel',
-      perView: 4,
+      perView: 3,
+      startAt: 3,
       focusAt: 'center',
-      autoplay: 2000,
-      gap: 5,
+      autoplay: 4000,
+      gap: 25,
       hoverpause: false,
       breakpoints: {
         1000: {
-          perView: 3,
+          perView: 1,
         },
-        600: {
-          perView: 2,
+        500: {
+          perView: 1,
         },
       },
     });
