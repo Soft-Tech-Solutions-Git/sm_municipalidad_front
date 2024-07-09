@@ -36,12 +36,12 @@ export class SliderComponent implements AfterViewInit {
       startAt: 0,
       focusAt: 'center',
       autoplay: 3000,
-      gap: 450,
+      gap: 50,
       hoverpause: false,
       breakpoints: {
         1600: {
           perView: 2,
-          gap: 350,
+          gap: 50,
         },
         1000: {
           perView: 1,
