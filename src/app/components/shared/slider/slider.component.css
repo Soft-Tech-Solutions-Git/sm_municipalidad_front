@@ -7,7 +7,7 @@ img {
   height: 100%;
   width: 100%;
   border-radius: 25px;
-  object-fit: cover;
+  object-fit: fill;
   /* border: 2px solid red; */
 }
 button {
@@ -23,7 +23,7 @@ button:hover {
   background-color: #0dcaf0;
 }
 .glide__bullets {
-  bottom: 23em;
+  bottom: 25em;
 }
 .glide__bullets button {
   width: 16px;
@@ -35,9 +35,11 @@ button:hover {
   background-color: #0d6dfd !important;
 }
 .glide__arrow--left {
+  top: 15em;
   left: 0px;
 }
 .glide__arrow--right {
+  top: 15em;
   right: 0px;
 }
 @media screen and (max-width: 1600px) {
