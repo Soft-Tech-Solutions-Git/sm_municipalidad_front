@@ -1,11 +1,11 @@
 .glide-desktop {
-  height: 70vh;
-  width: 100vw;
+  height: 55vh;
+  width: 100%;
   /* border: 2px solid red; */
 }
 img {
-  height: 63vh;
-  width: 160%;
+  height: 100%;
+  width: 100%;
   border-radius: 25px;
   object-fit: cover;
   /* border: 2px solid red; */
@@ -23,7 +23,7 @@ button:hover {
   background-color: #0dcaf0;
 }
 .glide__bullets {
-  bottom: 11em;
+  bottom: 23em;
 }
 .glide__bullets button {
   width: 16px;
@@ -42,17 +42,17 @@ button:hover {
 }
 @media screen and (max-width: 1600px) {
   .glide-desktop {
-    height: 65vh;
-    width: 100vw;
+    height: 55vh;
+    width: 100%;
     /* border: 2px solid red; */
   }
   img {
-    height: 58vh;
-    width: 160%;
+    height: 100%;
+    width: 100%;
     /* border: 2px solid red; */
   }
   .glide__bullets {
-    bottom: 12em;
+    bottom: 22em;
   }
 }
 @media screen and (max-width: 1000px) {
