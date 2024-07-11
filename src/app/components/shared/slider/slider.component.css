@@ -15,8 +15,6 @@ button {
   color: #0d6dfd;
   border-radius: 50%;
   font-size: 22px;
-  display: flex;
-  justify-content: space-between;
   z-index: 999;
 }
 button:hover {
@@ -46,15 +44,19 @@ button:hover {
   .glide-desktop {
     height: 55vh;
     width: 100%;
-    /* border: 2px solid red; */
   }
   img {
     height: 100%;
     width: 100%;
-    /* border: 2px solid red; */
   }
   .glide__bullets {
-    bottom: 22em;
+    bottom: 24em;
+  }
+  .glide__arrow--left {
+    top: 13em;
+  }
+  .glide__arrow--right {
+    top: 13em;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -63,8 +65,9 @@ button:hover {
     width: 100vw;
   }
   .glide__bullets {
-    bottom: 16em;
+    bottom: 21em;
   }
+
   img {
     /* border: 2px solid red; */
     height: 55vh;
@@ -77,7 +80,7 @@ button:hover {
     /* border: 2px solid red; */
   }
   .glide__bullets {
-    bottom: 20em;
+    bottom: 24em;
   }
   img {
     margin-top: -35px;
