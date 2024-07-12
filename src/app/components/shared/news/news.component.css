@@ -8,3 +8,12 @@ img {
   text-decoration: none;
   color: #fff;
 }
+.card-text,
+.card-title {
+  text-shadow: 1px 0px 1px black;
+}
+@media screen and (max-width: 1000px) {
+  .col-lg-8 {
+    display: none;
+  }
+}

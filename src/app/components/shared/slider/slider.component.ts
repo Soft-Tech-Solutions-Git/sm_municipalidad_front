@@ -19,15 +19,16 @@ export class SliderComponent implements AfterViewInit {
     'assets/images/mobile3.svg',
   ];
 
+  public isDesktopVisible: boolean;
+  public isMobileVisible: boolean;
+
   constructor(private AdaptativeService: AdaptativeService) {
     this.isDesktopVisible = true;
     this.isMobileVisible = true;
   }
+
   public desktopGlide: any;
   public mobileGlide: any;
-
-  public isDesktopVisible: boolean;
-  public isMobileVisible: boolean;
 
   ngAfterViewInit(): void {
     this.desktopGlide = new Glide.default('.glide-desktop', {
