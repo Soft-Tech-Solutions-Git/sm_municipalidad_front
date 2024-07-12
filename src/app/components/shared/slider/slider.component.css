@@ -50,7 +50,7 @@ button:hover {
     width: 100%;
   }
   .glide__bullets {
-    bottom: 24em;
+    bottom: 20em;
   }
   .glide__arrow--left {
     top: 13em;
@@ -65,7 +65,7 @@ button:hover {
     width: 100vw;
   }
   .glide__bullets {
-    bottom: 21em;
+    bottom: 22em;
   }
 
   img {
@@ -80,7 +80,7 @@ button:hover {
     /* border: 2px solid red; */
   }
   .glide__bullets {
-    bottom: 24em;
+    bottom: 16em;
   }
   img {
     margin-top: -35px;

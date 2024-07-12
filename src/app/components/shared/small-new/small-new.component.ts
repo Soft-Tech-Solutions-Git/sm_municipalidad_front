@@ -1,14 +1,16 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { News } from 'src/app/interfaces/news.interface';
-import { AdaptativeService } from 'src/app/services/adaptative.service';
 
 @Component({
-  selector: 'app-news',
-  templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css'],
+  selector: 'app-small-new',
+  templateUrl: './small-new.component.html',
+  styleUrls: ['./small-new.component.css'],
 })
-export class NewsComponent implements AfterViewInit {
+export class SmallNewComponent {
   public news: News[] = [
+    {
+      image: 'assets/images/donadores.jpg',
+    },
     {
       title: 'DESARROLLO SOCIAL',
       description:
@@ -36,42 +38,10 @@ export class NewsComponent implements AfterViewInit {
         'Fernando Moreira y Martín Sabbatella recorrieron obras cloacales que beneficiarán a más de 30 mil personas',
       image: 'assets/images/news1.jpg',
     },
-    {
-      image: 'assets/images/donadores.jpg',
-    },
   ];
 
-  selectSmallNew(): News[] {
-    return this.news.filter((newsItem) => !newsItem.title);
-  }
-  public smallNews = this.selectSmallNew();
-
-  selectSpecialNew(): News[] {
-    return this.news.filter((newsItem) => newsItem.title === 'Obras públicas');
-  }
-  public specialNews = this.selectSpecialNew();
-
   selectNormalNew(): News[] {
-    return this.news.filter(
-      (newsItem) => newsItem.title != 'Obras públicas' && newsItem.title
-    );
+    return this.news.filter((newsItem) => newsItem.title != 'Obras públicas');
   }
   public normalNews = this.selectNormalNew();
-
-  public isDesktopVisible: boolean;
-  public isMobileVisible: boolean;
-
-  constructor(private AdaptativeService: AdaptativeService) {
-    this.isDesktopVisible = true;
-    this.isMobileVisible = true;
-  }
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      if (this.AdaptativeService.sizeDisplay === 'web') {
-        this.isMobileVisible = false;
-      } else if (this.AdaptativeService.sizeDisplay === 'tablet') {
-        this.isDesktopVisible = false;
-      }
-    }, 0);
-  }
 }

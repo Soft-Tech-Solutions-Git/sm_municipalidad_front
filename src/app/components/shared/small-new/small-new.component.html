@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row row-cols-2">
+    <div class="col-sm-4 col-md-4" *ngFor="let normalNew of normalNews">
+      <div class="card border-light h-100">
+        <img
+          [src]="normalNew.image"
+          class="card-img-top img-fluid"
+          style="height: 280px"
+          alt="News image"
+          oncontextmenu="return false"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ normalNew.title }}</h5>
+          <p class="card-text text-capitalize">{{ normalNew.description }}</p>
+          <a href="#" class="card-link text-uppercase" style="color: black"
+            >Seguir leyendo ➔</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
