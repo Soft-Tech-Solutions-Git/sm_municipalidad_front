@@ -4,6 +4,7 @@ import { SliderComponent } from './slider/slider.component';
 import { StoriesComponent } from './stories/stories.component';
 import { NewsComponent } from './news/news.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SmallNewComponent } from './small-new/small-new.component';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,15 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     StoriesComponent,
     NewsComponent,
     NavBarComponent,
+    SmallNewComponent,
   ],
   imports: [CommonModule],
-  exports: [SliderComponent, StoriesComponent, NewsComponent, NavBarComponent],
+  exports: [
+    SliderComponent,
+    StoriesComponent,
+    NewsComponent,
+    NavBarComponent,
+    SmallNewComponent,
+  ],
 })
 export class SharedModule {}

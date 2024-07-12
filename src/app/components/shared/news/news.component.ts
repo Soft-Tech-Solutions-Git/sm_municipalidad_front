@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { News } from 'src/app/interfaces/news.interface';
 
-// interface News {
-//   title: string;
-//   desc: string;
-//   img: string;
-// }
-
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
@@ -34,10 +28,6 @@ export class NewsComponent {
         'San Martín implementa la Historia Clínica Digital en toda la red pública de salud.',
       image:
         'https://images.prismic.io/sitiosale/Zmiu5pm069VX1pwl_SanMart%C3%ADnimplementalaHistoriaCl%C3%ADnicaDigitalentodalaredp%C3%BAblicadesalud.jpg?auto=format%2Ccompress&rect=0%2C1%2C7952%2C5303&w=1600&h=1067?fit=clip&w=1400',
-    },
-    {
-      title: 'Obras públicas',
-      image: 'assets/images/news1.jpg',
     },
   ];
 }
