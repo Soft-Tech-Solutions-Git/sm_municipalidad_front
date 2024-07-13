@@ -1,0 +1,15 @@
+img {
+  border-radius: 25px;
+  object-fit: content;
+}
+.card {
+  border-radius: 25px;
+}
+.card-link {
+  text-decoration: none;
+  color: #fff;
+}
+.card-text,
+.card-title {
+  text-shadow: 1px 0px 1px black;
+}

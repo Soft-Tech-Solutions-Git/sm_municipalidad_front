@@ -1,5 +1,6 @@
 img {
   border-radius: 25px;
+  object-fit: cover;
 }
 .card {
   border-radius: 25px;
