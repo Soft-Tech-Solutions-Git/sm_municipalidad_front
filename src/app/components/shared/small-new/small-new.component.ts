@@ -40,8 +40,14 @@ export class SmallNewComponent {
     },
   ];
 
+  selecPublicityNew(): News[] {
+    return this.news.filter((newsItem) => !newsItem.title);
+  }
+  public publicityNew = this.selecPublicityNew();
   selectNormalNew(): News[] {
-    return this.news.filter((newsItem) => newsItem.title != 'Obras públicas');
+    return this.news.filter(
+      (newsItem) => newsItem.title && newsItem.description
+    );
   }
   public normalNews = this.selectNormalNew();
 }

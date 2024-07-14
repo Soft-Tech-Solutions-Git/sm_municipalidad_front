@@ -1,4 +1,14 @@
 <div class="container">
+  <div class="row" *ngFor="let publicity of publicityNew">
+    <img
+      [src]="publicity.image"
+      class="card-img-top img-fluid"
+      style="height: 280px"
+      alt="News image"
+      oncontextmenu="return false"
+    />
+  </div>
+
   <div class="row row-cols-2">
     <div class="col-sm-4 col-md-4" *ngFor="let normalNew of normalNews">
       <div class="card border-light h-100">
