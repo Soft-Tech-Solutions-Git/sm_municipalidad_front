@@ -1,6 +1,7 @@
-<div class="container pt-4 px-5" *ngIf="isDesktopVisible">
+<div class="container pt-1" *ngIf="isDesktopVisible">
   <div class="row">
-    <div class="col-lg-8">
+    <app-big-new class="col-lg-8" />
+    <!-- <div class="col-lg-8">
       <div
         class="card border-light text-bg-dark"
         *ngFor="let specialNew of specialNews"
@@ -12,7 +13,7 @@
           oncontextmenu="return false"
         />
         <div class="card-img-overlay d-flex flex-column justify-content-end">
-          <h5 class="card-title fs-5 text-uppercase">{{ specialNew.title }}</h5>
+          <h5 class="card-title fs-5">{{ specialNew.title | uppercase }}</h5>
           <p class="card-text fs-5">
             <strong>{{ specialNew.description }}</strong>
           </p>
@@ -21,19 +22,20 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="col-lg-4 col-sm-4" *ngFor="let smallNew of smallNews">
+    <!-- <div class="col-lg-4 col-sm-4" *ngFor="let smallNew of smallNews">
       <img
         [src]="smallNew.image"
         class="card-img img-fluid"
         oncontextmenu="return false"
       />
-    </div>
+    </div> -->
+    <app-ads class="col-lg-4 col-sm-4" />
   </div>
 
   <div class="row">
-    <div class="col-lg-4 col-sm-4" *ngFor="let normalNew of normalNews">
+    <!-- <div class="col-lg-4 col-sm-4" *ngFor="let normalNew of normalNews">
       <div class="card border-light h-100">
         <img
           [src]="normalNew.image"
@@ -50,8 +52,17 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
+    <app-small-new />
   </div>
 </div>
 
-<app-small-new *ngIf="isMobileVisible" />
+<div class="container" *ngIf="isMobileVisible">
+  <div class="row">
+    <app-ads class="col" />
+  </div>
+
+  <div class="row">
+    <app-small-new-mobile />
+  </div>
+</div>

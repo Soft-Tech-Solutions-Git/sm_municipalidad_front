@@ -1,4 +1,4 @@
-<div class="glide-desktop pt-4" *ngIf="isDesktopVisible">
+<div class="glide-desktop pt-2" *ngIf="isDesktopVisible">
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
       <li
@@ -41,11 +41,6 @@
   </div>
 
   <div class="glide__bullets" data-glide-el="controls[nav]">
-    <!-- <button
-      *ngFor="let image of images; let i = index"
-      class="glide__bullet"
-      data-glide-dir="`=$i`"
-    ></button> -->
     <button class="glide__bullet" data-glide-dir="=0"></button>
     <button class="glide__bullet" data-glide-dir="=1"></button>
     <button class="glide__bullet" data-glide-dir="=2"></button>

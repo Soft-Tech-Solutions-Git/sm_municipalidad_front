@@ -1,26 +1,52 @@
-<app-nav-bar />
-<app-slider />
-<br />
-<div class="container">
-  <div class="d-flex justify-content-between">
-    <h2 class="text-primary">Historias</h2>
-    <button class="btn btn-primary">Ver más...</button>
+<nav
+  class="navbar fixed-top navbar-expand-lg"
+  style="background-color: #e4f2fc"
+>
+  <div class="container-fluid">
+    <a href="#">
+      <img
+        src="assets/images/logo.svg"
+        alt="Logo"
+        width="90"
+        height="90"
+        oncontextmenu="return false"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link fs-5"
+            aria-current="page"
+            routerLink="/home"
+            routerLinkActive="active"
+            ><img class="p-2" src="assets/images/home.svg" alt="Home" />Home</a
+          >
+        </li>
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link fs-5"
+            aria-current="page"
+            routerLink="allnews"
+            routerLinkActive="active"
+            ><img class="p-2" src="assets/images/news.svg" alt="Home" />All
+            News</a
+          >
+        </li> -->
+      </ul>
+    </div>
   </div>
-</div>
-<app-stories />
-<br />
-<div class="container">
-  <div class="d-flex justify-content-between">
-    <h2 class="text-primary">Noticias</h2>
-    <button class="btn btn-primary">Ver más...</button>
-  </div>
-</div>
-<!-- <app-small-new /> -->
-<app-news />
-<!-- <div class="container">
-  <div class="d-flex justify-content-between">
-    <h2 class="text-primary"></h2>
-    <button class="btn btn-primary">Ver más noticias...</button>
-  </div>
-</div> -->
+</nav>
 <router-outlet></router-outlet>
+<app-footer />

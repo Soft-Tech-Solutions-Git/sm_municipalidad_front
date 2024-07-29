@@ -1,0 +1,20 @@
+<div
+  class="card border-light text-bg-dark"
+  *ngFor="let specialNew of specialNews"
+>
+  <img
+    [src]="specialNew.image"
+    class="card-img img-fluid"
+    style="height: 400px"
+    oncontextmenu="return false"
+  />
+  <div class="card-img-overlay d-flex flex-column justify-content-end">
+    <h5 class="card-title fs-5">{{ specialNew.title | uppercase }}</h5>
+    <p class="card-text fs-5">
+      <strong>{{ specialNew.description }}</strong>
+    </p>
+    <p class="card-text fs-5">
+      <a href="#" class="card-link text-uppercase">Seguir leyendo ➔</a>
+    </p>
+  </div>
+</div>

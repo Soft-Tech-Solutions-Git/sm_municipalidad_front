@@ -1,6 +1,7 @@
 .glide-desktop {
   height: 55vh;
   width: 100%;
+  position: relative;
   /* border: 2px solid red; */
 }
 img {
@@ -21,7 +22,12 @@ button:hover {
   background-color: #0dcaf0;
 }
 .glide__bullets {
-  bottom: 25em;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 .glide__bullets button {
   width: 16px;
@@ -32,55 +38,54 @@ button:hover {
 .glide__bullet--active {
   background-color: #0d6dfd !important;
 }
+.glide__arrow--left,
+.glide__arrow--right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .glide__arrow--left {
-  top: 15em;
-  left: 0px;
+  left: 0;
 }
 .glide__arrow--right {
-  top: 15em;
-  right: 0px;
+  right: 0;
 }
 @media screen and (max-width: 1600px) {
   .glide-desktop {
     height: 55vh;
     width: 100%;
+    position: relative;
   }
   img {
     height: 100%;
     width: 100%;
-  }
-  .glide__bullets {
-    bottom: 20em;
-  }
-  .glide__arrow--left {
-    top: 13em;
-  }
-  .glide__arrow--right {
-    top: 13em;
   }
 }
 @media screen and (max-width: 1000px) {
   .glide-mobile {
     height: 60vh;
     width: 100vw;
+    position: relative;
   }
-  .glide__bullets {
-    bottom: 22em;
-  }
-
   img {
     /* border: 2px solid red; */
     height: 55vh;
     width: 100%;
   }
+  .glide__bullets {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 500px) {
   .glide-mobile {
     height: 50vh;
+    position: relative;
     /* border: 2px solid red; */
-  }
-  .glide__bullets {
-    bottom: 16em;
   }
   img {
     margin-top: -35px;
