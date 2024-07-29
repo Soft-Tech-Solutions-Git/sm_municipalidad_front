@@ -1,1 +1,47 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a href="#">
+      <img
+        src="assets/images/logo.svg"
+        alt="Logo"
+        width="90"
+        height="90"
+        oncontextmenu="return false"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLink="/home"
+            routerLinkActive="active"
+            ><img class="p-2" src="assets/images/home.svg" alt="Home" />Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLink="/allnews"
+            routerLinkActive="active"
+            ><img class="p-2" src="assets/images/news.svg" alt="Home" />All
+            News</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

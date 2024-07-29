@@ -1,0 +1,35 @@
+<app-slider />
+<br />
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h2 class="text-primary">Historias</h2>
+  </div>
+</div>
+<app-stories />
+<br />
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h2 class="text-primary">Noticias</h2>
+    <button class="btn btn-info" routerLink="/allnews">Ver más...</button>
+  </div>
+</div>
+<div class="container pt-1" *ngIf="isDesktopVisible">
+  <div class="row">
+    <app-big-new class="col-lg-8" />
+    <app-ads class="col-lg-4 col-sm-4" />
+  </div>
+
+  <div class="row">
+    <app-small-new />
+  </div>
+</div>
+
+<div class="container" *ngIf="isMobileVisible">
+  <div class="row">
+    <app-ads class="col" />
+  </div>
+
+  <div class="row">
+    <app-small-new-mobile />
+  </div>
+</div>

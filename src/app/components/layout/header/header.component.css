@@ -1,0 +1,10 @@
+.navbar {
+  border-bottom: 1px solid #8e8d8d6d;
+  height: 90px;
+}
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 0;
+  align-items: flex-start;
+}

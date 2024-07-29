@@ -1,12 +1,12 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { AdaptativeService } from 'src/app/services/adaptative.service';
 
 @Component({
-  selector: 'app-news',
-  templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css'],
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css'],
 })
-export class NewsComponent implements AfterViewInit {
+export class HomePageComponent {
   public isDesktopVisible: boolean;
   public isMobileVisible: boolean;
 

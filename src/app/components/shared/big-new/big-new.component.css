@@ -1,13 +1,6 @@
-.card-container {
-  display: flex;
-  flex-direction: row;
-}
-.card {
-  margin: 5px;
-}
 img {
   border-radius: 25px;
-  object-fit: content;
+  object-fit: cover;
 }
 .card {
   border-radius: 25px;
@@ -19,4 +12,9 @@ img {
 .card-text,
 .card-title {
   text-shadow: 1px 0px 1px black;
+}
+@media screen and (max-width: 1000px) {
+  .col-lg-8 {
+    display: none;
+  }
 }
