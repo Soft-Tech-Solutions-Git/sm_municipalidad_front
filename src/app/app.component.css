@@ -2,3 +2,28 @@
   position: sticky;
   top: 0;
 }
+/* .collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+.image {
+  width: 35px;
+  height: 35px;
+}
+.active {
+  background-color: #c9e2fb;
+  border-radius: 25px;
+}
+.dropdown-menu {
+  background-color: #e4f2fc;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #c9e2fb;
+  border-radius: 25px;
+}
+/* @media (max-width: 767px) {
+  .collapse {
+    display: block !important;
+  }
+} */

@@ -1,0 +1,19 @@
+.glide3 {
+  height: 80vh;
+  padding: 10px 0;
+  /* border: 2px solid red; */
+}
+img {
+  height: 75vh;
+  width: 100%;
+  /* border: 2px solid red; */
+  /* border-radius: 50px; */
+  object-fit: cover;
+}
+.content {
+  position: relative;
+  top: -15vh;
+  left: 5vh;
+  z-index: 1;
+  padding: 5px 10px;
+}

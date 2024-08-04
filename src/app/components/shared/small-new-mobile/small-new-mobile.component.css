@@ -1,6 +1,7 @@
 img {
   border-radius: 25px;
-  object-fit: content;
+  object-fit: cover;
+  height: 30vh;
 }
 .card {
   border-radius: 25px;
