@@ -1,15 +1,18 @@
 <app-slider />
+
 <br />
 <div class="container">
   <div class="d-flex justify-content-between">
     <h2 class="text-primary">Historias</h2>
   </div>
 </div>
+
 <app-stories />
+
 <br />
 <div class="container">
   <div class="d-flex justify-content-between">
-    <h2 class="text-primary">Noticias</h2>
+    <h2 class="text-primary" id="news-section">Noticias</h2>
     <button class="btn btn-info" routerLink="/allnews">Ver más...</button>
   </div>
 </div>
@@ -24,7 +27,7 @@
   </div>
 </div>
 
-<div class="container" *ngIf="isMobileVisible">
+<div class="container" id="news-section" *ngIf="isMobileVisible">
   <div class="row">
     <app-ads class="col" />
   </div>
@@ -33,3 +36,12 @@
     <app-small-new-mobile />
   </div>
 </div>
+
+<br />
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h2 class="text-primary" id="news-section">Áreas</h2>
+    <button class="btn btn-info" routerLink="/areas">Ver más...</button>
+  </div>
+</div>
+<app-areas />

@@ -1,18 +1,14 @@
 <div class="row row-cols-2">
-  <div
-    class="col-lg-4 col-sm-4"
-    *ngFor="let localNew of normalNews; track: normalNew"
-  >
+  <div class="col-lg-4 col-sm-4" *ngFor="let localNew of normalNews">
     <div class="card border-light h-100">
       <img
         [src]="localNew.image"
         class="card-img-top img-fluid"
-        style="height: 280px"
         alt="News image"
         oncontextmenu="return false"
       />
       <div class="card-body">
-        <h5 class="card-title">{{ localNew.title }}</h5>
+        <h5 class="card-title">{{ localNew.title | uppercase }}</h5>
         <p class="card-text text-capitalize">{{ localNew.description }}</p>
         <a
           class="card-link text-uppercase btn btn-info"

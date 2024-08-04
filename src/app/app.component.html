@@ -3,12 +3,12 @@
   style="background-color: #e4f2fc"
 >
   <div class="container-fluid">
-    <a href="#">
+    <a routerLink="/home">
       <img
         src="assets/images/logo.svg"
         alt="Logo"
-        width="90"
-        height="90"
+        width="70"
+        height="70"
         oncontextmenu="return false"
       />
     </a>
@@ -24,29 +24,119 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a
             class="nav-link fs-5"
             aria-current="page"
             routerLink="/home"
             routerLinkActive="active"
-            ><img class="p-2" src="assets/images/home.svg" alt="Home" />Home</a
+            ><img
+              class="p-2 image"
+              src="assets/images/home.svg"
+              alt="Home"
+            />INICIO</a
           >
         </li>
-        <!-- <li class="nav-item">
-          <a
-            class="nav-link fs-5"
-            aria-current="page"
-            routerLink="allnews"
-            routerLinkActive="active"
-            ><img class="p-2" src="assets/images/news.svg" alt="Home" />All
-            News</a
+        <li class="nav-item">
+          <a class="nav-link fs-5" aria-current="page" href="#news-section"
+            ><img
+              class="p-2 image"
+              src="assets/images/news.svg"
+              alt="News"
+            />NOTICIAS</a
           >
-        </li> -->
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><img class="p-2 image" src="assets/images/layer.svg" alt="Home" />
+            AREAS
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="">AMBIENTE</a></li>
+            <li><a class="dropdown-item" routerLink="">CULTURA</a></li>
+            <li><a class="dropdown-item" routerLink="">JUVENTUD</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link fs-5 icon-link"
+            aria-current="page"
+            href="https://wa.me/+5492645748636"
+            target="_blank"
+          >
+            <img
+              class="p-2 image"
+              src="assets/images/whatsapp.svg"
+              alt="Whatsapp"
+            />
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
 <router-outlet></router-outlet>
+
 <app-footer />
+
+<!-- <nav
+  class="navbar fixed-top navbar-expand-lg"
+  style="background-color: #e4f2fc"
+>
+  <div class="container-fluid">
+    <a routerLink="/home">
+      <img
+        src="assets/images/logo.svg"
+        alt="Logo"
+        width="70"
+        height="70"
+        oncontextmenu="return false"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a
+            class="nav-link fs-5"
+            [routerLink]="item.link"
+            [attr.routerLink]="item.link.startsWith('#') ? null : item.link"
+          >
+            <img class="p-2 image" [src]="item.icon" [alt]="item.text" />
+            {{ item.text }}
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li *ngFor="let social of socialLinks" class="nav-item">
+          <a
+            class="nav-link fs-5 icon-link"
+            [href]="social.link"
+            target="_blank"
+          >
+            <img class="p-2 image" [src]="social.icon" alt="Social" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->

@@ -11,6 +11,7 @@ import { AdsComponent } from './ads/ads.component';
 import { BigNewComponent } from './big-new/big-new.component';
 import { SmallNewMobileComponent } from './small-new-mobile/small-new-mobile.component';
 import { NewDetailsComponent } from './new-details/new-details.component';
+import { AreasComponent } from './areas/areas.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NewDetailsComponent } from './new-details/new-details.component';
     BigNewComponent,
     SmallNewMobileComponent,
     NewDetailsComponent,
+    AreasComponent,
   ],
   imports: [CommonModule, LayoutModule, RouterModule],
   exports: [
@@ -33,6 +35,7 @@ import { NewDetailsComponent } from './new-details/new-details.component';
     BigNewComponent,
     SmallNewMobileComponent,
     NewDetailsComponent,
+    AreasComponent,
   ],
 })
 export class SharedModule {}
