@@ -1,0 +1,5 @@
+<div class="container" *ngIf="areas && areas.length > 0">
+  <h3>Área: {{ areas[0].title }}</h3>
+  <p>{{ areas[0].subTitle }}</p>
+  <img [src]="areas[0].url" alt="areas image" />
+</div>

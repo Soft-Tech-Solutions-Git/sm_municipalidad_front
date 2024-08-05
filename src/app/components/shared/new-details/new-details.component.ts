@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { News } from 'src/app/interfaces/news.interface';
 import { DataService } from 'src/app/services/data.service';
 
