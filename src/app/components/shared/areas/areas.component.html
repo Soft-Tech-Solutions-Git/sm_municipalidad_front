@@ -4,10 +4,18 @@
       <li *ngFor="let image of images" class="glide__slide">
         <img [src]="image.url" oncontextmenu="return false" />
         <div class="content">
-          <h3>{{ image.title }}</h3>
-          <p>{{ image.subTitle }}</p>
+          <h3 class="txt">{{ image.title }}</h3>
+          <p class="txt">{{ image.subTitle }}</p>
+          <a
+            class="card-link txt text-uppercase btn btn-info"
+            routerLink="/areasareasFull"
+            (click)="areaSelected([image])"
+            style="color: black"
+            >Seguir leyendo ➔</a
+          >
         </div>
       </li>
     </ul>
   </div>
 </div>
+<!-- [routerLink]="['/areasareasFull', image.id]" -->

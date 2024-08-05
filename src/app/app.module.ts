@@ -9,10 +9,10 @@ import { LayoutModule } from './components/layout/layout.module';
 import { RoutesModule } from './components/routes/routes.module';
 import { SharedModule } from './components/shared/shared.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { AreasComponent } from './components/shared/areas/areas.component';
+import { AreasFullComponent } from './pages/areas-full/areas-full.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent],
+  declarations: [AppComponent, HomePageComponent, AreasFullComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
